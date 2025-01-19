@@ -100,15 +100,85 @@ const STAGE_CONFIGS = {
                     y: 50,      // 全体の中心Y座標
                     size: 400,  // 全体のサイズ
                     dots: [
-                        { x: 20, y: 20, size: 30, beat: 1 },  // 左上
-                        { x: 80, y: 20, size: 30, beat: 2 },  // 右上
-                        { x: 20, y: 40, size: 30, beat: 3 },  // 左から2番目
-                        { x: 80, y: 40, size: 30, beat: 4 },  // 右から2番目
-                        { x: 20, y: 60, size: 30, beat: 5 },  // 左から3番目
-                        { x: 80, y: 60, size: 30, beat: 6 },  // 右から3番目
-                        { x: 20, y: 80, size: 30, beat: 7 },  // 左下
-                        { x: 80, y: 80, size: 30, beat: 8 }   // 右下
+                        // 1行目
+                        { x: 10, y: 10, size: 30, beat: 1 },
+                        { x: 20, y: 10, size: 30, beat: 2 },
+                        { x: 30, y: 10, size: 30, beat: 3 },
+                        { x: 40, y: 10, size: 30, beat: 4 },
+                        { x: 50, y: 10, size: 30, beat: 5 },
+                        { x: 60, y: 10, size: 30, beat: 6 },
+                        { x: 70, y: 10, size: 30, beat: 7 },
+                        { x: 80, y: 10, size: 30, beat: 8 },
                         
+                        // 2行目
+                        { x: 10, y: 20, size: 30, beat: 9 },
+                        { x: 20, y: 20, size: 30, beat: 10 },
+                        { x: 30, y: 20, size: 30, beat: 11 },
+                        { x: 40, y: 20, size: 30, beat: 12 },
+                        { x: 50, y: 20, size: 30, beat: 13 },
+                        { x: 60, y: 20, size: 30, beat: 14 },
+                        { x: 70, y: 20, size: 30, beat: 15 },
+                        { x: 80, y: 20, size: 30, beat: 16 },
+                    
+                        // 3行目
+                        { x: 10, y: 30, size: 30, beat: 17 },
+                        { x: 20, y: 30, size: 30, beat: 18 },
+                        { x: 30, y: 30, size: 30, beat: 19 },
+                        { x: 40, y: 30, size: 30, beat: 20 },
+                        { x: 50, y: 30, size: 30, beat: 21 },
+                        { x: 60, y: 30, size: 30, beat: 22 },
+                        { x: 70, y: 30, size: 30, beat: 23 },
+                        { x: 80, y: 30, size: 30, beat: 24 },
+                    
+                        // 4行目
+                        { x: 10, y: 40, size: 30, beat: 25 },
+                        { x: 20, y: 40, size: 30, beat: 26 },
+                        { x: 30, y: 40, size: 30, beat: 27 },
+                        { x: 40, y: 40, size: 30, beat: 28 },
+                        { x: 50, y: 40, size: 30, beat: 29 },
+                        { x: 60, y: 40, size: 30, beat: 30 },
+                        { x: 70, y: 40, size: 30, beat: 31 },
+                        { x: 80, y: 40, size: 30, beat: 32 },
+                    
+                        // 5行目
+                        { x: 10, y: 50, size: 30, beat: 33 },
+                        { x: 20, y: 50, size: 30, beat: 34 },
+                        { x: 30, y: 50, size: 30, beat: 35 },
+                        { x: 40, y: 50, size: 30, beat: 36 },
+                        { x: 50, y: 50, size: 30, beat: 37 },
+                        { x: 60, y: 50, size: 30, beat: 38 },
+                        { x: 70, y: 50, size: 30, beat: 39 },
+                        { x: 80, y: 50, size: 30, beat: 40 },
+                    
+                        // 6行目
+                        { x: 10, y: 60, size: 30, beat: 41 },
+                        { x: 20, y: 60, size: 30, beat: 42 },
+                        { x: 30, y: 60, size: 30, beat: 43 },
+                        { x: 40, y: 60, size: 30, beat: 44 },
+                        { x: 50, y: 60, size: 30, beat: 45 },
+                        { x: 60, y: 60, size: 30, beat: 46 },
+                        { x: 70, y: 60, size: 30, beat: 47 },
+                        { x: 80, y: 60, size: 30, beat: 48 },
+                    
+                        // 7行目
+                        { x: 10, y: 70, size: 30, beat: 49 },
+                        { x: 20, y: 70, size: 30, beat: 50 },
+                        { x: 30, y: 70, size: 30, beat: 51 },
+                        { x: 40, y: 70, size: 30, beat: 52 },
+                        { x: 50, y: 70, size: 30, beat: 53 },
+                        { x: 60, y: 70, size: 30, beat: 54 },
+                        { x: 70, y: 70, size: 30, beat: 55 },
+                        { x: 80, y: 70, size: 30, beat: 56 },
+                    
+                        // 8行目
+                        { x: 10, y: 80, size: 30, beat: 57 },
+                        { x: 20, y: 80, size: 30, beat: 58 },
+                        { x: 30, y: 80, size: 30, beat: 59 },
+                        { x: 40, y: 80, size: 30, beat: 60 },
+                        { x: 50, y: 80, size: 30, beat: 61 },
+                        { x: 60, y: 80, size: 30, beat: 62 },
+                        { x: 70, y: 80, size: 30, beat: 63 },
+                        { x: 80, y: 80, size: 30, beat: 64 },
                     ]
                 }
             }
@@ -586,7 +656,7 @@ const stageSettings = {
     1: { dots: 4 },
     2: { dots: 8 },
     3: { dots: 4 },
-    4: { dots: 8 },
+    4: { dots: 64 },
     5: { dots: 8 },
     6: { dots: 8 },
     7: { dots: 8 },
