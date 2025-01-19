@@ -2,11 +2,15 @@
 const playButton = document.getElementById('playButton');
 const playIcon = document.getElementById('playIcon');
 const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
+const nextButton1 = document.getElementById('nextButton1');
+const nextButton2 = document.getElementById('nextButton2');
+
+
 const progressBarElement = document.getElementById('progressBar');
 const currentTimeDisplay = document.getElementById('currentTime');
 const problemArea = document.getElementById('problemArea');
 const titleArea = document.querySelector('.title-area h2');
+
 //====================================================
 // 定数定義
 //====================================================
@@ -1366,7 +1370,21 @@ prevButton.addEventListener('click', () => {
     }
 });
 
-nextButton.addEventListener('click', () => {
+nextButton1.addEventListener('click', () => {
+    clickCounts.next++;
+    if (currentStage === 17) return;
+
+    if (clearedStages.has(currentStage)) {
+        currentStage++;
+        updateStageContent();
+        return;
+    }
+
+    const currentBeat = Math.floor(currentBeatProgress) + 1;
+    selectedBeats.add(currentBeat);
+});
+
+nextButton2.addEventListener('click', () => {
     clickCounts.next++;
     if (currentStage === 17) return;
 
