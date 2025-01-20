@@ -1279,6 +1279,29 @@ function checkRhythmPattern() {
     
     selectedBeats.clear();
 }
+
+
+
+
+// NEXT1のクリックハンドラー関数を定義
+function handleNextClick1() {
+    clickCounts.next++;
+    if (currentStage === 17) return;
+
+    if (clearedStages.has(currentStage)) {
+        currentStage++;
+        updateStageContent();
+        return;
+    }
+
+    const currentBeat = Math.floor(currentBeatProgress) + 1;
+    selectedBeats.add(currentBeat);
+}
+// nextButton1のイベントリスナーを更新
+nextButton1.addEventListener('click', handleNextClick1);
+
+// nextButton2のイベントリスナーも同じ関数を使用
+nextButton2.addEventListener('click', handleNextClick1);
 //====================================================
 // UI更新関数
 //====================================================
@@ -1810,6 +1833,28 @@ initialize = async function() {
 };
 
 
+
+// キーボードイベントの追加
+document.addEventListener('keydown', (event) => {
+    // EnterキーとSpaceキー、FキーとJキーの処理
+    if (event.key === 'Enter' || 
+        event.key === ' ' || 
+        event.key.toLowerCase() === 'f' ||
+        event.key.toLowerCase() === 'j') {
+        event.preventDefault(); // デフォルトのスクロール等を防止
+        handleNextClick1(); // NEXT1と同じ処理を実行
+    }
+});
+
+// モバイルでの誤操作防止のため、フォーカス時のスペースキー入力を制御
+document.addEventListener('keyup', (event) => {
+    if (event.key === ' ' || 
+        event.key.toLowerCase() === 'f' ||
+        event.key.toLowerCase() === 'j') {
+        event.preventDefault();
+    }
+});
+
 // 初期化関数を修正
 async function initialize() {
     // モーダルの制御
@@ -1845,6 +1890,8 @@ async function initialize() {
     // OKボタンのクリックイベント
     startButton.addEventListener('click', startGame);
 }
+
+
 
 // 初期化実行
 initialize();
